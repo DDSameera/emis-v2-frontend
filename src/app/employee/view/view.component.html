@@ -1,0 +1,49 @@
+<h1>Employee Profile</h1>
+
+<ul class="list list-group">
+  <li class="list-group-item">Employee Name : {{empSingleRecord.first_name}} {{empSingleRecord.last_name}}</li>
+  <li class="list-group-item">Date of Birth : {{empSingleRecord.birth_date}} </li>
+  <li class="list-group-item">Gender : {{empSingleRecord.gender}} </li>
+  <li class="list-group-item">Hire date : {{empSingleRecord.hire_date}} </li>
+
+</ul>
+<h2>Salary Details</h2>
+<table class="table table-sm">
+  <thead>
+  <tr>
+    <th>Amount</th>
+    <th>From Date</th>
+    <th>To Date</th>
+  </tr>
+
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let salary of empSingleRecord.salaries">
+    <td>{{salary.salary}}</td>
+    <td>{{salary.from_date}}</td>
+    <td>{{salary.to_date}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2>Designation Details</h2>
+<table class="table table-sm">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>From Date</th>
+    <th>To Date</th>
+  </tr>
+
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let desg of empSingleRecord.designations">
+    <td>{{desg.title}}</td>
+    <td>{{desg.from_date}}</td>
+    <td>{{desg.to_date}}</td>
+  </tr>
+  </tbody>
+</table>
+

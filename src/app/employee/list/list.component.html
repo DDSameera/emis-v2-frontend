@@ -1,0 +1,29 @@
+<p>list works!</p>
+
+
+<button class="btn btn-sm btn-primary" routerLink="/create">Create IEmployee Record</button>
+<table class="table table-primary mt-5">
+  <thead>
+  <tr>
+    <th>IEmployee No</th>
+    <th>Birth Date</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Gender</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let el of employees">
+    <td>{{el.emp_no}}</td>
+    <td>{{el.birth_date}}</td>
+    <td>{{el.first_name}}</td>
+    <td>{{el.last_name}}</td>
+    <td>{{el.gender}}</td>
+    <td>
+      <button routerLink="view/{{el.emp_no}}"  class="btn btn-primary btn-sm">View More</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
